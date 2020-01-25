@@ -1,0 +1,30 @@
+<h2> Edit "<%= @lashes.name %>" Lashes</h2>
+
+<h2>
+<form action="/lashes/ <%= @lashes.id %>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="patch">
+    <label>Name:</>
+    <input type="text" id="name" name="lashes[name]" value="<%= @lashes.name %>"><br>
+    <label>Brand:</>
+    <input type="text" id="brand" name="lashes[brand]" value="<%= @lashes.brand %>"><br>
+    <label>Style:</>
+    <input type="text" id="style" name="lashes[style]" value="<%= @lashes.style %>"><br>
+    <label>Comments:</>
+    <textarea>
+    </textarea>
+    <br>
+    <br>
+    <input type="submit" value="Save Changes">
+</form></h2>
+
+<form action="/lashes/<%= @lashes.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button> DELETE </button>
+</form>
+
+<br>
+<br>
+<br>
+<h4><a href="/lashes/new">Add New Lash Post</a></h4>
+<h4><a href="/lashes">Home</a></h4>
+<h4> <p><a href="/logout">Log Out</a></p></h4>

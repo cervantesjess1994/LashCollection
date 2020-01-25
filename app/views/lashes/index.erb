@@ -1,0 +1,9 @@
+<h1>Lash Collection</h1>
+<h4> <p><a href="/logout">Log Out</a></p></h4>
+<h4><a href="/lashes/new">Add New Lash Post</a></h4>
+<br>
+<br>
+   <% @lashes.each do |lashes| %>
+   <h4><a href="/lashes/<%= lashes.id %>/edit">Edit</a></h4>
+    <h2><a href="/lashes/<%= lashes.id %>">"<%= lashes.name %>" by <%= lashes.brand %></a></h2>
+    <% end %>
